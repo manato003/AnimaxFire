@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-yellow-500 text-black hover:bg-yellow-600 active:bg-yellow-700;
+  }
+}
+
+.dark {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.light {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  background-image: linear-gradient(to bottom right, #f3e8ff, #ffffff, #f5f3ff);
+}
